@@ -50,7 +50,7 @@ vector<point> jarvis(vector<point> &points) {
     return hull;
 }
 
-point base; 
+point base;
 
 bool compare(point p1, point p2) {
     int o = orientation(base, p1, p2);
@@ -61,7 +61,7 @@ bool compare(point p1, point p2) {
 
 vector<point> graham(vector<point> &points) {
     int n = points.size();
-    if (n < 3) return {};
+    
 
     
     int minIdx = 0;
@@ -101,11 +101,11 @@ int main() {
 
 
     // vector<point> convex_hull = jarvis(points);
-    vector<point> convex_hull = graham(points);
+    // vector<point> convex_hull = graham(points);
 
-    cout << "Convex Hull by graham:\n";
-    for (auto p : convex_hull)
-        cout << "(" << p.x << ", " << p.y << ")\n";
+    // cout << "Convex Hull by graham:\n";
+    // for (auto p : convex_hull)
+    //     cout << "(" << p.x << ", " << p.y << ")\n";
 
     return 0;
 }
